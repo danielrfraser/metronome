@@ -24,7 +24,8 @@ class Metronome{
 
         std::vector<std::function<void(int)> > callbacks_;
         std::chrono::milliseconds duration_;
-        
+        std::chrono::microseconds tick_duration_;
+
         std::mutex mutex_;
         std::condition_variable lock_condition_;
 };
